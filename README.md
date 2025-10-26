@@ -337,7 +337,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ```
 MIT License
 
-Copyright (c) 2025 Harmeet Bhatia & Saanvi Baras Kar
+Copyright (c) 2025 Harmeet Bhatia & Saanvi Baraskar
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -361,7 +361,7 @@ SOFTWARE.
 ## 👥 Authors
 
 - **Harmeet Bhatia** - *Initial work* - Student ID: 16015024010
-- **Saanvi Baras Kar** - *Initial work* - Student ID: 16015024007
+- **Saanvi Baraskar** - *Initial work* - Student ID: 16015024007
 
 ## 🙏 Acknowledgments
 
