@@ -351,18 +351,21 @@ public class Client extends JFrame {
                     break;
                    
                 case NOTIFICATION:
-                    chatArea.append("*** " + message.getContent() + " ***\n");
-                    chatArea.setCaretPosition(chatArea.getDocument().getLength());
-                   
+                 // Clear chat area when joining a new room
                     if (message.getRoomId() != null && !message.getRoomId().isEmpty()) {
+                         String notif = message.getContent();
+                    if (notif.contains("Joined room:")) {
+                        chatArea.setText("");  // Clear previous room's messages
                         currentRoom = message.getRoomId();
-                        String notif = message.getContent();
-                        if (notif.contains("Joined room:")) {
-                            String roomName = notif.substring(notif.indexOf(":") + 1).trim();
-                            currentRoomLabel.setText("Room: " + roomName);
-                        }
-                    }
-                    break;
+                        String roomName = notif.substring(notif.indexOf(":") + 1).trim();
+                        currentRoomLabel.setText("Room: " + roomName);
+        }
+    }
+    
+                        chatArea.append("*** " + message.getContent() + " ***\n");
+                        chatArea.setCaretPosition(chatArea.getDocument().getLength());
+                     break;
+
                    
                 case PASSWORD_INCORRECT:
                     JOptionPane.showMessageDialog(this,
